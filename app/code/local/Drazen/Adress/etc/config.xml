@@ -5,6 +5,7 @@
 			<version>0.1.0</version>
 		</Drazen_Adress>
 	</modules>
+
 	<global>
 		<models>
 			<drazen_adress>
@@ -33,4 +34,16 @@
 			</drazen_adress_setup>
 		</resources>
 	</global>
+
+	<frontend>
+		<routers>
+			<drazen_adress>
+				<use>standard</use>
+				<args>
+					<module>Drazen_Adress</module>
+					<frontName>adress</frontName>
+				</args>
+			</drazen_adress>
+		</routers>
+	</frontend>
 </config>
