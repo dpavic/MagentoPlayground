@@ -1,0 +1,7 @@
+<layout>
+	<drazen_address_index_index>
+		<reference name="content">
+			<block type="drazen_address/configurable" name="smece" template="drazen/configurable.phtml"/>
+		</reference>
+	</drazen_address_index_index>
+</layout>
