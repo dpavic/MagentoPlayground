@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Drazen_Address>
+			<version>0.1.0</version>
+		</Drazen_Address>
+	</modules>
+
+	<global>
+		<models>
+			<drazen_address>
+				<class>Drazen_Address_Model</class>
+				<resourceModel>drazen_address_resource</resourceModel>
+			</drazen_address>
+			<drazen_address_resource>
+				<class>Drazen_Address_Model_Resource</class>
+			</drazen_address_resource>
+		</models>
+		<blocks>
+			<drazen_address>
+				<class>Drazen_Address_Block</class>
+			</drazen_address>
+		</blocks>
+		<helpers>
+			<drazen_address>
+				<class>Drazen_Address_Helper</class>
+			</drazen_address>
+		</helpers>
+		<resources>
+			<drazen_address_setup>
+				<setup>
+					<module>Drazen_Address</module>
+				</setup>
+			</drazen_address_setup>
+		</resources>
+	</global>
+
+	<frontend>
+		<routers>
+			<drazen_address>
+				<use>standard</use>
+				<args>
+					<module>Drazen_Address</module>
+					<frontName>address</frontName>
+				</args>
+			</drazen_address>
+		</routers>
+		<layout>
+			<updates>
+				<address>
+					<file>drazen.xml</file>
+				</address>
+			</updates>
+		</layout>
+	</frontend>
+</config>

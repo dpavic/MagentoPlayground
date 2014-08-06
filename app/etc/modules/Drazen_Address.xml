@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Drazen_Address>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Drazen_Address>
+	</modules>
+</config>
