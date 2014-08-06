@@ -11,6 +11,8 @@ app/design/frontend/default/default/
 app/design/frontend/default/iphone/
 app/design/frontend/default/modern/
 app/design/frontend/enterprise/default
+app/design/frontend/rwd/
+app/design/frontend/rwd/default/locale/en-US/translate.csv
 app/design/install/
 app/etc/modules/Enterprise_*
 app/etc/modules/Find_Feed.xml
@@ -120,3 +122,5 @@ skin/frontend/enterprise
 skin/install/
 var/
 .idea/
+svastanesto/
+app/design/frontend/rwd/default/locale/en_US/translate.csv
