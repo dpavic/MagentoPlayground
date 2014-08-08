@@ -1,3 +1,15 @@
 <?php
 
-echo $this->smece();
+/**
+ * @var $this Drazen_Address_Block_Configurable
+ */
+$allData = $this->getAllAddresses();
+
+foreach ($allData as $data) {
+	echo $data->getName() . '<br />' .
+		$data->getAddress() . ', ' . $data->getPostcode() . ' ' . $data->getCity() . '<br />' .
+		$data->getPhone() . '<br />' .
+		$data->getEmail() . '<br />';
+
+	echo '<br />';
+}
