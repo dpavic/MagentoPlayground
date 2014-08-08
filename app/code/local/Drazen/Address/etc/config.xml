@@ -2,7 +2,7 @@
 <config>
 	<modules>
 		<Drazen_Address>
-			<version>0.1.0</version>
+			<version>0.1.1</version>
 		</Drazen_Address>
 	</modules>
 
@@ -14,6 +14,11 @@
 			</drazen_address>
 			<drazen_address_resource>
 				<class>Drazen_Address_Model_Resource</class>
+				<entities>
+					<address>
+						<table>drazen_address_address</table>
+					</address>
+				</entities>
 			</drazen_address_resource>
 		</models>
 		<blocks>

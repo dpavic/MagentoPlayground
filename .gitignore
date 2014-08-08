@@ -124,3 +124,5 @@ var/
 .idea/
 svastanesto/
 app/design/frontend/rwd/default/locale/en_US/translate.csv
+app/code/local/Inchoo/
+app/etc/modules/Inchoo_DBScript.xml
