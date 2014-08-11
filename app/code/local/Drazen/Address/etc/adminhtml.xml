@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		<address translate="title" module="drazen_address">
+			<title>Offices</title>
+			<sort_order>999</sort_order>
+			<children>
+				<address>
+					<title>Office List</title>
+					<sort_order>1</sort_order>
+					<action>adminhtml/officelist/index</action>
+				</address>
+			</children>
+		</address>
+	</menu>
+</config>

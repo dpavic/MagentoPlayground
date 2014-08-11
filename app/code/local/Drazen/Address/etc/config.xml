@@ -40,6 +40,18 @@
 		</resources>
 	</global>
 
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Drazen_Address after="Mage_Adminhtml">Drazen_Address</Drazen_Address>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+
 	<frontend>
 		<routers>
 			<drazen_address>
