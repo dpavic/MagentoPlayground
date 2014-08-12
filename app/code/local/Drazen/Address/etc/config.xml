@@ -22,6 +22,9 @@
 			</drazen_address_resource>
 		</models>
 		<blocks>
+			<drazen_address_adminhtml>
+				<class>Drazen_Address_Block_Adminhtml</class>
+			</drazen_address_adminhtml>
 			<drazen_address>
 				<class>Drazen_Address_Block</class>
 			</drazen_address>
@@ -42,13 +45,13 @@
 
 	<admin>
 		<routers>
-			<adminhtml>
+			<drazen_address_admin>
+				<use>admin</use>
 				<args>
-					<modules>
-						<Drazen_Address after="Mage_Adminhtml">Drazen_Address</Drazen_Address>
-					</modules>
+					<module>Drazen_Address_Adminhtml</module>
+					<frontName>office-admin</frontName>
 				</args>
-			</adminhtml>
+			</drazen_address_admin>
 		</routers>
 	</admin>
 
