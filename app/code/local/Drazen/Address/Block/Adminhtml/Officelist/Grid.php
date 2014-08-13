@@ -10,6 +10,11 @@ class Drazen_Address_Block_Adminhtml_Officelist_Grid extends Mage_Adminhtml_Bloc
 		return parent::_prepareCollection();
 	}
 
+	public function getRowUrl($row)
+	{
+		return $this->getUrl('drazen_address_admin/office/edit', array('id' => $row->getId()));
+	}
+
 	protected function _prepareColumns()
 	{
 		$this->addColumn('address_id', array(
@@ -27,7 +32,7 @@ class Drazen_Address_Block_Adminhtml_Officelist_Grid extends Mage_Adminhtml_Bloc
 		$this->addColumn('address', array(
 			'header' => $this->_getHelper()->__('Address'),
 			'type'   => 'text',
-			'index'  => 'name',
+			'index'  => 'address',
 		));
 
 		$this->addColumn('city', array(
@@ -53,22 +58,21 @@ class Drazen_Address_Block_Adminhtml_Officelist_Grid extends Mage_Adminhtml_Bloc
 		));
 
 		$this->addColumn('action', array(
-			'header' => $this->_getHelper()->__('Action'),
-			'width' => '50px',
-			'type' => 'action',
-			'actions' => array(
+			'header'   => $this->_getHelper()->__('Action'),
+			'width'    => '50px',
+			'type'     => 'action',
+			'actions'  => array(
 				array(
 					'caption' => $this->_getHelper()->__('Edit'),
-					'url' => array(
-						'base' => 'drazen_address_admin'
-							. '/officelist/edit',
+					'url'     => array(
+						'base' => 'drazen_address_admin/office/edit',
 					),
-					'field' => 'id'
+					'field'   => 'id'
 				),
 			),
-			'filter' => false,
+			'filter'   => false,
 			'sortable' => false,
-			'index' => 'address_id',
+			'index'    => 'address_id',
 		));
 
 		return parent::_prepareColumns();

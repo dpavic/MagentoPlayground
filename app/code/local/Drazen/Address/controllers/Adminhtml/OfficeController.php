@@ -37,7 +37,7 @@ class Drazen_Address_Adminhtml_OfficeController extends Mage_Adminhtml_Controlle
 
 		Mage::register('current_office', $office);
 
-		$officeEditBlock = $this->getLayout()->createBlock('drazen_address_adminhtml/adminhtml_officelist_edit');
+		$officeEditBlock = $this->getLayout()->createBlock('drazen_address_adminhtml/officelist_edit');
 
 		$this->loadLayout()->_addContent($officeEditBlock)->renderLayout();
 	}

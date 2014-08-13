@@ -10,4 +10,9 @@ class Drazen_Address_Block_Adminhtml_Officelist extends Mage_Adminhtml_Block_Wid
 		$this->_controller = 'officelist';
 		$this->_headerText = Mage::helper('drazen_address')->__('List of Offices');
 	}
+
+	public function getCreateUrl()
+	{
+		return $this->getUrl('drazen_address_admin/office/edit');
+	}
 }

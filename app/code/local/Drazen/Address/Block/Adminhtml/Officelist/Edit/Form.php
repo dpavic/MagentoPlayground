@@ -6,7 +6,7 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 	{
 		$form = new Varien_Data_Form(array(
 			'id'     => 'edit_form',
-			'action' => $this->getUrl('drazen_address_admin/officelist/edit', array(
+			'action' => $this->getUrl('drazen_address_admin/office/edit', array(
 						'_curent'  => true,
 						'continue' => 0,
 					)
@@ -38,7 +38,7 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 			'postcode' => array(
 				'label'   => $this->__('Postcode'),
 				'input'   => 'text',
-				'requred' => true,
+				'required' => true,
 			),
 			'phone'    => array(
 				'label' => $this->__('Phone'),
@@ -52,7 +52,7 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 		return $this;
 	}
 
-	private function _addFieldsToFieldset(Varien_Data_Form_Element_Fieldset $fieldset, $fields)
+	protected function _addFieldsToFieldset(Varien_Data_Form_Element_Fieldset $fieldset, $fields)
 	{
 		$requestData = new Varien_Object($this->getRequest()->getPost('officeData'));
 
@@ -62,13 +62,13 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 			}
 
 			$_data['name'] = "officeData[$name]";
-			$data['title'] = $_data['lable'];
+			$_data['title'] = $_data['lable'];
 
 			if (!array_key_exists('value', $_data)) {
-				$data['value'] = $this->_getOffice()->getData($name);
+				$_data['value'] = $this->_getOffice()->getData($name);
 			}
 
-			$fieldset->addField($name, $data['input'], $_data);
+			$fieldset->addField($name, $_data['input'], $_data);
 		}
 		return $this;
 	}
