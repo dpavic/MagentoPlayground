@@ -7,7 +7,7 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 		$form = new Varien_Data_Form(array(
 			'id'     => 'edit_form',
 			'action' => $this->getUrl('drazen_address_admin/office/edit', array(
-						'_curent'  => true,
+						'_current'  => true,
 						'continue' => 0,
 					)
 				),
@@ -62,7 +62,7 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 			}
 
 			$_data['name'] = "officeData[$name]";
-			$_data['title'] = $_data['lable'];
+			$_data['title'] = $_data['label'];
 
 			if (!array_key_exists('value', $_data)) {
 				$_data['value'] = $this->_getOffice()->getData($name);
@@ -78,10 +78,10 @@ class Drazen_Address_Block_Adminhtml_Officelist_Edit_Form extends Mage_Adminhtml
 		if (!$this->hasData('office')) {
 			$office = Mage::registry('current_office');
 
-			if (!$office instanceof Drazen_Address_Model_Address) {
+			/*if (!$office instanceof Drazen_Address_Model_Address) {
 				$office = Mage::getModel('drazen_address/address');
 			}
-
+*/
 			$this->setData('office', $office);
 		}
 

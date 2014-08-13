@@ -12,7 +12,6 @@ class Drazen_Address_Adminhtml_OfficeController extends Mage_Adminhtml_Controlle
 	public function editAction()
 	{
 		$office = Mage::getModel('drazen_address/address');
-
 		if ($officeId = $this->getRequest()->getParam('id', false)) {
 			$office->load($officeId);
 
@@ -42,10 +41,9 @@ class Drazen_Address_Adminhtml_OfficeController extends Mage_Adminhtml_Controlle
 		$this->loadLayout()->_addContent($officeEditBlock)->renderLayout();
 	}
 
-	public function delete()
+	public function deleteAction()
 	{
 		$office = Mage::getModel('drazen_address/address');
-
 		if ($officeId = $this->getRequest()->getParam('id', false)) {
 			$office->load($officeId);
 		}
