@@ -72,5 +72,15 @@
 				</address>
 			</updates>
 		</layout>
+		<events>
+			<page_block_html_topmenu_gethtml_before>
+				<observers>
+					<drazen_address>
+						<class>drazen_address/observer</class>
+						<method>addToTopmenu</method>
+					</drazen_address>
+				</observers>
+			</page_block_html_topmenu_gethtml_before>
+		</events>
 	</frontend>
 </config>

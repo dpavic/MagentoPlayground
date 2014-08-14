@@ -1,15 +1,34 @@
+<h3>Offices</h3><br/>
 <?php
-
 /**
  * @var $this Drazen_Address_Block_Configurable
  */
-$allData = $this->getAllAddresses();
-
-foreach ($allData as $data) {
-	echo $data->getName() . '<br />' .
-		$data->getAddress() . ', ' . $data->getPostcode() . ' ' . $data->getCity() . '<br />' .
-		$data->getPhone() . '<br />' .
-		$data->getEmail() . '<br />';
-
-	echo '<br />';
+$cities = $this->getDistinctCities();
+?>
+<div>
+<?php if (count($cities) > 0): ?>
+	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+		<select name="city" id="cities" onchange="this.form.submit()">
+			<option value="">-- Please Select --</option>
+			<?php foreach ($cities as $key => $city): ?>
+				<option value="<?php echo $city; ?>">
+					<?php echo $city; ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+	</form>
+<?php endif; ?>
+</div>
+<br/>
+<hr>
+<br/>
+<?php
+if (isset($_POST['city'])) {
+	$allData = $this->filterByCity($_POST['city']);
+	$this->renderData($allData);
+} else {
+	$allData = $this->getAllAddresses();
+	$this->renderData($allData);
 }
+?>
+
