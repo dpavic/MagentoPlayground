@@ -40,7 +40,12 @@ class Drazen_Address_Block_Configurable extends Mage_Core_Block_Template
 		return $offices;
 	}
 
-	public function renderData($allData)
+	/**
+	 * Render all offices information
+	 *
+	 * @param $allData Varien_Data_Collection_Db
+	 */
+	public function renderListOffices($allData)
 	{
 		foreach ($allData as $data) {
 			echo $data->getName() . '<br />' .

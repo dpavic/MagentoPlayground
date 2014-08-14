@@ -83,6 +83,4 @@ class Drazen_Address_Block_Adminhtml_Officelist_Grid extends Mage_Adminhtml_Bloc
 	{
 		return Mage::helper('drazen_address');
 	}
-
-
 }
